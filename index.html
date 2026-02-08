@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshua - SMK YADIKA 4</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="yadika.png">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        /* FIX: Nama Sekolah di Navbar */
+        .brand-logo {
+            font-weight: 700;
+            /* Menggunakan font size dinamis agar tidak pecah/turun ke bawah */
+            font-size: clamp(1.2rem, 5vw, 2rem) !important;
+            padding-left: 10px;
+            white-space: nowrap;
+            /* Mencegah teks turun ke baris baru */
+        }
+
+        /* Hero / Parallax Section */
+        .parallax-container {
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .parallax-content {
+            width: 100%;
+            z-index: 5;
+            padding: 0 20px;
+            /* Tambahan padding biar teks tidak kena pinggir layar HP */
+        }
+
+        .hero-text {
+            font-weight: 800;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+            /* FIX: Ukuran font judul di HP */
+            font-size: clamp(2rem, 8vw, 4rem);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            /* Naikkan sedikit agar tidak tertutup menu browser HP */
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) {
+            .brand-logo {
+                margin-left: 10px;
+            }
+
+            .hero-text {
+                line-height: 1.2;
+            }
+
+            .parallax-container {
+                height: 400px;
+                /* Sedikit lebih pendek di HP agar pas */
+            }
+
+            /* Merapikan sambutan di HP */
+            .valign-wrapper.flex-on-mobile {
+                display: block !important;
+                text-align: center;
+            }
+
+            .img-profile {
+                width: 150px;
+                margin: 0 auto 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="blue darken-4 z-depth-2">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="https://smkyadika4.id/" class="brand-logo">SMK YADIKA 4</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#sambutan">Sambutan</a></li>
+                        <li><a href="#pengumuman">Pengumuman</a></li>
+                        <li><a href="#informasi">Informasi</a></li>
+                        <li><a href="#artikel">Artikel</a></li>
+                        <li><a href="#kontak" class="waves-effect waves-light btn yellow darken-3 black-text"
+                                style="font-weight: bold; margin-left: 20px;">Hubungi Kami!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li class="blue darken-4 center" style="padding: 20px 0;">
+            <h5 class="white-text">SMK YADIKA 4</h5>
+        </li>
+        <li><a href="#sambutan"><i class="material-icons">record_voice_over</i>Sambutan</a></li>
+        <li><a href="#pengumuman"><i class="material-icons">campaign</i>Pengumuman</a></li>
+        <li><a href="#informasi"><i class="material-icons">info</i>Informasi</a></li>
+        <li><a href="#artikel"><i class="material-icons">article</i>Artikel</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#kontak"><i class="material-icons">email</i>Kontak</a></li>
+    </ul>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="sekolah.jpg" alt="Gedung Sekolah"></div>
+        <div class="parallax-content container center white-text">
+            <h2 class="hero-text">Selamat Datang di SMK YADIKA 4</h2>
+            <p class="flow-text light">Mencetak Generasi Unggul, Berkarakter, dan Berprestasi di Era Digital.</p>
+            <a href="#sambutan" class="btn-large blue darken-2 waves-effect waves-light">Pelajari Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <section id="sambutan" class="grey lighten-4">
+        <div class="container">
+            <div class="row valign-wrapper flex-on-mobile">
+                <div class="col s12 m4 center">
+                    <img src="https://smkyadika4.id/wp-content/uploads/2025/05/lab-software.jpg" alt="Kepala Sekolah"
+                        class="circle responsive-img img-profile">
+                </div>
+                <div class="col s12 m8">
+                    <h4 class="blue-text text-darken-4" style="font-weight: 600;">Kata Sambutan Kepala Sekolah</h4>
+                    <p class="flow-text" style="font-style: italic; color: #555;">
+                        "Selamat datang di website resmi SMK Yadika 4. Website ini kami hadirkan sebagai sarana
+                        komunikasi digital untuk memberikan informasi yang akurat bagi orang tua, alumni, dan calon
+                        peserta didik mengenai dedikasi kami dalam dunia pendidikan."
+                    </p>
+                    <p class="flow-text">
+                        Sebagai Sekolah Menengah Kejuruan, SMK Yadika 4 berkomitmen untuk mencetak lulusan yang
+                        kompeten, berkarakter, dan siap kerja sesuai tuntutan industri modern.
+                    </p>
+                    <p><strong>- Drs. Martin Sihaloho</strong><br><span class="grey-text">Kepala Sekolah SMK YADIKA
+                            4</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pengumuman">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l7">
+                    <h4 class="section-title left-align"><i class="material-icons left blue-text">campaign</i>
+                        Pengumuman</h4>
+                    <ul class="collection z-depth-1" style="border: none; border-radius: 8px;">
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle green">assignment_ind</i>
+                            <span class="title"><b>Pendaftaran Siswa Baru 2026/2027</b></span>
+                            <p>Gelombang 2 Dibuka mulai 1 Desember 2025 - 30 Maret 2026.<br>
+                                <a href="SPMB.jpeg" class="blue-text">Lihat SPMB...</a>
+                            </p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle orange">event_note</i>
+                            <span class="title"><b>Libur Semester Ganjil</b></span>
+                            <p>Mulai tanggal 19 Desember 2025 hingga 5 Januari 2026.<br>
+                                <a href="kalender ganjil.png" class="blue-text">Kalender Smt. Ganjil...</a> ||
+                                <a href="kalender akademik.png" class="blue-text">Kalender Smt. Genap...</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="informasi" class="col s12 l5">
+                    <h4 class="section-title left-align"><i class="material-icons left blue-text">info</i> Informasi
+                    </h4>
+                    <div class="card blue darken-3">
+                        <div class="card-content white-text">
+                            <ul style="margin: 0;">
+                                <li style="margin-bottom: 10px;"><i class="material-icons left tiny">check_circle</i>
+                                    <strong>Akreditasi:</strong> A (Amat Baik)
+                                </li>
+                                <li style="margin-bottom: 10px;"><i class="material-icons left tiny">check_circle</i>
+                                    <strong>Kurikulum:</strong> Kurikulum Merdeka
+                                </li>
+                                <li style="margin-bottom: 10px;"><i class="material-icons left tiny">check_circle</i>
+                                    <strong>Fasilitas:</strong> Lab Komputer, Perpustakaan, Lapangan Olahraga.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <a href="Brosur PPDB.png" class="yellow-text text-lighten-2">Unduh Brosur</a>
+                            <a href="#sambutan" class="yellow-text text-lighten-2">Visi & Misi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artikel" class="grey lighten-3">
+        <div class="container">
+            <h4 class="center section-title">Artikel & Prestasi Terbaru</h4>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://smkyadika4.id/wp-content/uploads/2025/05/prestasi2.jpg">
+                            <span class="card-title"
+                                style="background: rgba(0,0,0,0.5); width: 100%; font-size: 16px;">Seni Budaya</span>
+                        </div>
+                        <div class="card-content">
+                            <p><b>Tari Saman:</b> Melestarikan Budaya Bangsa melalui Ekstrakurikuler.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://smkyadika4.id/wp-content/uploads/2025/05/prestasi10.jpg">
+                            <span class="card-title"
+                                style="background: rgba(0,0,0,0.5); width: 100%; font-size: 16px;">Prestasi</span>
+                        </div>
+                        <div class="card-content">
+                            <p><b>LKS MPLB:</b> Juara Kompetensi Manajemen Perkantoran Kota Tangerang.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://smkyadika4.id/wp-content/uploads/2025/05/prestasi6.jpg">
+                            <span class="card-title"
+                                style="background: rgba(0,0,0,0.5); width: 100%; font-size: 16px;">Akuntansi</span>
+                        </div>
+                        <div class="card-content">
+                            <p><b>LKS Akuntansi:</b> Mengasah ketelitian siswa dalam olimpiade akuntansi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container">
+            <h4 class="center section-title">Hubungi Kami</h4>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel z-depth-1">
+                        <form>
+                            <div class="input-field">
+                                <i class="material-icons prefix">person</i>
+                                <input type="text" id="name" class="validate">
+                                <label for="name">Nama Lengkap</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input type="email" id="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">message</i>
+                                <textarea id="message" class="materialize-textarea"></textarea>
+                                <label for="message">Pesan Anda</label>
+                            </div>
+                            <button class="btn waves-effect waves-light blue darken-4 btn-large" style="width: 100%;"
+                                type="submit">
+                                Kirim Pesan <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <h5 style="margin-top: 0;"><i class="material-icons left">place</i> Lokasi Sekolah</h5>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.1129442247125!2d106.70510587499037!3d-6.221848593766188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb59fcb7d9f1%3A0xff6b402aff8b26b!2sSMK%20Yadika%204!5e1!3m2!1sid!2sid!4v1770558968846!5m2!1sid!2sid"
+                            width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">SMK YADIKA 4</h5>
+                    <p class="grey-text text-lighten-4">Palem Ganda Asri 1, Gg. H. Lembang No.60, RT.002/RW.001, Karang
+                        Tengah, Kec. Karang Tengah, Kota Tangerang, Banten 15157</p>
+                    <p><i class="material-icons tiny">phone</i> +62 838-1331-0838 <br> <i
+                            class="material-icons tiny">email</i> smkyadika4@gmail.com</p>
+                    <p><i class="material-icons tiny">website</i>~ Website Ini Dibuat Oleh Yoshua Raamses XII TKJ 3  <br>- <a
+                            href="https://smkyadika4.id/">Klik Untuk Kunjungi Website Resmi! </a>-</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Media Sosial</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3 social-link"
+                                href="https://www.instagram.com/smkyadika4/"><i
+                                    class="material-icons left tiny">link</i>Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3 social-link"
+                                href="https://web.facebook.com/smkyadika4tangerang/"><i
+                                    class="material-icons left tiny">link</i>Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3 social-link"
+                                href="https://www.youtube.com/@SMKYADIKA4"><i
+                                    class="material-icons left tiny">link</i>YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright blue darken-3">
+            <div class="container center">
+                © 2026 SMK YADIKA 4 - All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6281382091740" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+
+            var elems = document.querySelectorAll('.parallax');
+            M.Parallax.init(elems);
+        });
+    </script>
+</body>
+
+</html>
